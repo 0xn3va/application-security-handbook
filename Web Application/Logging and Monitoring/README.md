@@ -39,7 +39,9 @@ Event logging is one of the most important components of application security. L
 
 <details>
 <summary>Example of classification by severity</summary>
+
 `INFO`, `DEBUG`, `WARN`, `ERROR`
+
 </details>
 
 - Make sure there is a process in place for proper monitoring of logged events.
