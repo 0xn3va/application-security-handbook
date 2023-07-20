@@ -30,16 +30,17 @@ Event logging is one of the most important components of application security. L
     - Data types.
 
     See:
-        - [Format of events logged by an application](#format-of-events-logged-by-an-application)
-        - [Format of events logged in an access log](#format-of-events-logged-in-an-access-log)
+
+    - [Format of events logged by an application](#format-of-events-logged-by-an-application)
+    - [Format of events logged in an access log](#format-of-events-logged-in-an-access-log)
 
 - Make sure compliance with a logging format is guaranteed by a logging module interface at an application source code level.
 - Define event classification. Classification can be implemented based on events' type, severity, confidence, responsibility, compliance references, etc.
 
-    <details>
-    <summary>Example of classification by severity</summary>
-    INFO, DEBUG, WARN, ERROR
-    </details>
+<details>
+<summary>Example of classification by severity</summary>
+INFO, DEBUG, WARN, ERROR
+</details>
 
 - Make sure there is a process in place for proper monitoring of logged events.
 
@@ -49,7 +50,7 @@ Event logging is one of the most important components of application security. L
     - Share relevant event information with other detection systems, related organizations and centralized intelligence gathering/sharing systems.
 
 <div align="left">
-<img src=".gitbook/assets/type-advanced-icon.svg">
+<img src="/.gitbook/assets/type-advanced-icon.svg">
 </div>
 
 - Make a logging module a standard component that can be developed independently and reused across multiple applications.
@@ -67,36 +68,36 @@ Event logging is one of the most important components of application security. L
 
     Below you can find examples of properties that can be included in the log format.
 
-    {% tabs %}
-        {% tab title="when" %}
-        - Date and time of logging an event.
-        - Date and time of an event (if an event and its logging occurred at different times).
-        {% endtab %}
+{% tabs %}
+    {% tab title="when" %}
+    - Date and time of logging an event.
+    - Date and time of an event (if an event and its logging occurred at different times).
+    {% endtab %}
 
-        {% tab title="where" %}
-        - Application or component ID.
-        - Cluster, hostname, IP address and port number, workstation identity, local device ID.
-        - Service, for example, name and protocol.
-        - Geolocation.
-        - Window/form/page, for example, entry point URL and HTTP method for a web application, dialogue box name.
-        - Code location, for example, script name, module name.
-        {% endtab %}
+    {% tab title="where" %}
+    - Application or component ID.
+    - Cluster, hostname, IP address and port number, workstation identity, local device ID.
+    - Service, for example, name and protocol.
+    - Geolocation.
+    - Window/form/page, for example, entry point URL and HTTP method for a web application, dialogue box name.
+    - Code location, for example, script name, module name.
+    {% endtab %}
 
-        {% tab title="who (human or machine user)" %}
-        - User ID e.g. user database table primary key value or user name.
-        - User's device/machine ID.
-        - User's IP address.
-        - Cell/RF tower ID.
-        - Mobile number.
-        {% endtab %}
+    {% tab title="who (human or machine user)" %}
+    - User ID e.g. user database table primary key value or user name.
+    - User's device/machine ID.
+    - User's IP address.
+    - Cell/RF tower ID.
+    - Mobile number.
+    {% endtab %}
 
-        {% tab title="what" %}
-        - Type of event.
-        - Severity of event, for example fatal, error, warning, info, etc.
-        - Flag that indicates that the event is security related.
-        - Description.
-        {% endtab %}
-    {% endtabs %}
+    {% tab title="what" %}
+    - Type of event.
+    - Severity of event, for example fatal, error, warning, info, etc.
+    - Flag that indicates that the event is security related.
+    - Description.
+    {% endtab %}
+{% endtabs %}
 
 - Implement **only** Create and Read from the CRUD operations to work with logs.
 - Do **not** exclude any events from "known" event sources like penetration testers, auditors, internal systems, "trusted" third-party components or systems, search engine robots, uptime/process and other remote monitoring systems, etc. Add new property in event classification for such events to filter them out later.
@@ -107,7 +108,7 @@ Event logging is one of the most important components of application security. L
 - Comply with the requirements from the [Error and Exception Handling](/Web%20Application/Error%20and%20Exception%20Handling/README.md) section.
 
 <div align="left">
-<img src=".gitbook/assets/type-advanced-icon.svg">
+<img src="/.gitbook/assets/type-advanced-icon.svg">
 </div>
 
 - Do **not** log event data that fail input validation.
