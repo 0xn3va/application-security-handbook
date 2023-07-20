@@ -39,7 +39,7 @@ Event logging is one of the most important components of application security. L
 
 <details>
 <summary>Example of classification by severity</summary>
-INFO, DEBUG, WARN, ERROR
+`INFO`, `DEBUG`, `WARN`, `ERROR`
 </details>
 
 - Make sure there is a process in place for proper monitoring of logged events.
@@ -69,34 +69,34 @@ INFO, DEBUG, WARN, ERROR
     Below you can find examples of properties that can be included in the log format.
 
 {% tabs %}
-    {% tab title="when" %}
-    - Date and time of logging an event.
-    - Date and time of an event (if an event and its logging occurred at different times).
-    {% endtab %}
+{% tab title="when" %}
+- Date and time of logging an event.
+- Date and time of an event (if an event and its logging occurred at different times).
+{% endtab %}
 
-    {% tab title="where" %}
-    - Application or component ID.
-    - Cluster, hostname, IP address and port number, workstation identity, local device ID.
-    - Service, for example, name and protocol.
-    - Geolocation.
-    - Window/form/page, for example, entry point URL and HTTP method for a web application, dialogue box name.
-    - Code location, for example, script name, module name.
-    {% endtab %}
+{% tab title="where" %}
+- Application or component ID.
+- Cluster, hostname, IP address and port number, workstation identity, local device ID.
+- Service, for example, name and protocol.
+- Geolocation.
+- Window/form/page, for example, entry point URL and HTTP method for a web application, dialogue box name.
+- Code location, for example, script name, module name.
+{% endtab %}
 
-    {% tab title="who (human or machine user)" %}
-    - User ID e.g. user database table primary key value or user name.
-    - User's device/machine ID.
-    - User's IP address.
-    - Cell/RF tower ID.
-    - Mobile number.
-    {% endtab %}
+{% tab title="who (human or machine user)" %}
+- User ID e.g. user database table primary key value or user name.
+- User's device/machine ID.
+- User's IP address.
+- Cell/RF tower ID.
+- Mobile number.
+{% endtab %}
 
-    {% tab title="what" %}
-    - Type of event.
-    - Severity of event, for example fatal, error, warning, info, etc.
-    - Flag that indicates that the event is security related.
-    - Description.
-    {% endtab %}
+{% tab title="what" %}
+- Type of event.
+- Severity of event, for example fatal, error, warning, info, etc.
+- Flag that indicates that the event is security related.
+- Description.
+{% endtab %}
 {% endtabs %}
 
 - Implement **only** Create and Read from the CRUD operations to work with logs.
