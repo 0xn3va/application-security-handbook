@@ -347,10 +347,8 @@ func normalize(s string) (string, error) {
     if !utf8.ValidString(s) {
         return s, fmt.Errorf("Invalid UTF-8 characters found")
     }
-
     // Normalize string to NFKC form
     normS := norm.NFKC.String(s)
-
     // Verifies the string s has only allowed characters
     if !hasOnlyAllowedCharacters(normS) {
         return s, fmt.Errorf("It contains characters from outside allowed categories list")
