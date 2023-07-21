@@ -136,5 +136,6 @@ Remember that some packages can handle panics out of the box, [net/http](https:/
 
 # References
 
+- [OWASP Cheat Sheet Series: Error Handling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html)
 - [OWASP: Fail Securely](https://owasp.org/www-community/Fail_securely)
 - [CWE-636: Not Failing Securely ('Failing Open')](https://cwe.mitre.org/data/definitions/636.html)
