@@ -15,7 +15,9 @@ Best practices are divided into sections, each of which contains requirements fo
 
 Required requirements represent a necessary minimum that must be taken into account during implementation. Advanced requirements include best practices, the implementation of which is desirable when possible.
 
-> Please note that some requirements may have a negative impact on business processes or may not be applicable to an application. In this case, adapt them taking into account local conditions.
+{% hint style="info" %}
+Please note that some requirements may have a negative impact on business processes or may not be applicable to an application. In this case, adapt them taking into account local conditions.
+{% endhint %}
 
 ## Why does it exist?
 
