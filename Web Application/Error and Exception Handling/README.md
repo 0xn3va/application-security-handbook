@@ -58,6 +58,10 @@ try {
 
 # Error and exception handling
 
+<div align="left">
+<img src="/.gitbook/assets/type-base-icon.svg">
+</div>
+
 {% tabs %}
 {% tab title="Go" %}
 
