@@ -70,7 +70,7 @@ Validate all user-controlled data that are passed in:
     Cookie: session_id=cf565bc0aaf6560a56c9e6d8632baa58
     ```
 
-- HTTP body
+- HTTP body.
 
     ```
     POST /v2/user HTTP/1.1
