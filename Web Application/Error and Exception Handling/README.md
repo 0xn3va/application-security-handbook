@@ -61,7 +61,7 @@ try {
 {% tabs %}
 {% tab title="Go" %}
 
-In Go, you have to be aware of uncaught panics and handle them to prevent an application from crashing. You can omit the goroutine stack traces entirely by setting the `GOTRACEBACK` environment variable to `none`. In this case, you will only receive a panic message. See https://pkg.go.dev/runtime#hdr-Environment_Variables
+In Go, you have to be aware of uncaught panics and handle them to prevent an application from crashing. You can omit the goroutine stack traces entirely by setting the `GOTRACEBACK` environment variable to `none`. In this case, you will only receive a panic message. See [https://pkg.go.dev/runtime#hdr-Environment_Variables](https://pkg.go.dev/runtime#hdr-Environment_Variables)
 
 ```go
 package main
@@ -90,12 +90,12 @@ exit status 2
 Additionally, you can override a panic recovery and implement custom logic.
 
 {% hint style="info" %}
-Recover only works when called from the same goroutine as the panic is called in, see https://go.dev/ref/spec#Handling_panics
+Recover only works when called from the same goroutine as the panic is called in, see [https://go.dev/ref/spec#Handling_panics](https://go.dev/ref/spec#Handling_panics)
 {% endhint %}
 
 Use the following approaches to implement panic handling:
 
-1. Use the `defer` statement to handle panics, see https://go.dev/blog/defer-panic-and-recover
+1. Use the `defer` statement to handle panics, see [https://go.dev/blog/defer-panic-and-recover](https://go.dev/blog/defer-panic-and-recover)
 
     ```go
     defer func() {
