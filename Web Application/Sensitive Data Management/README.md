@@ -62,7 +62,7 @@ Payment cardholder data.
 <img src="/.gitbook/assets/type-base-icon.svg">
 </div>
 
-- Replace actual values with n "*" when masking data
+- Replace actual values with `n` `"*"` when masking data
 - n must be fixed and not depend on the length of the input data.
 - You can leave part of the data open if this part is open data or does not allow restoring the actual value. For example, the
 first 6 and last 4 digits of a card number are public data that can be left unmasked.
@@ -71,7 +71,7 @@ first 6 and last 4 digits of a card number are public data that can be left unma
 
 - The card number is masked as `*1234`, where `1234` is the last 4 digits of the card number.
 - `cvv2/cvc2` are masqueraded as `***`
-- Passwords, tokens, and session IDs are masked with `n` `*` characters, e.g. password `****`. `n` must be fixed and independent of the length of an input.
+- Passwords, tokens, and session IDs are masked with `n` `"*"` characters, e.g. password `****`. `n` must be fixed and independent of the length of an input.
 - Name and surname are masked as a minimum in the form `Name S`.
 - Phone number is masked as `+1(***)****1234`
 - Passport ID is masked as `*12`, where `12` is the last 2 digits of the passport ID.
