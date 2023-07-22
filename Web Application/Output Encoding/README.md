@@ -10,7 +10,7 @@ This section contains recommendations for implementing output encoding.
 
 In many scenarios, an application displays data that was gathered from untrusted sources such as user input. This can lead to vulnerabilities than an adversary leverage to perform attacks such as Cross-Site Scripting. To mitigate such security issues untrusted output must be encoded properly depending on the context it is being used.
 
-- Perform comprehensive input validation for each request, see the [Input Validation](/Web%20Application/Input%20Validation/README.md) section.
+- Perform comprehensive input validation for each request, see the [Input Validation](/Web%20Application/Input%20Validation/README.md) page.
 - Perform output encoding according to the context of any untrusted data before displaying it in a user interface (web browser, mobile app).
 
     For untrusted sources of data that must be encoded, please, see [Untrusted Data that must be encoded](#untrusted-data-that-must-be-encoded).

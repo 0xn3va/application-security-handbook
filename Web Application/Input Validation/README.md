@@ -1,6 +1,6 @@
 # Overview
 
-This section contains recommendations for providing input validation security functionality.
+This page contains recommendations for the implementation of input validation.
 
 {% hint style="info" %}
 Do **not** use input validation as the primary method of preventing Cross-Site Scripting, SQL injection and other attacks which are covered by the [Vulnerability Mitigation](/Web%20Application/Vulnerability%20Mitigation/README.md) section. Nevertheless, input validation can make a significant contribution to reducing the impact of these attacks if implemented properly.
@@ -92,7 +92,7 @@ Validate all user-controlled data that are passed in:
     email=username@domain.local
     ```
 
-- Uploaded files, see the [File Upload](/Web%20Application/File%20Upload/README.md) section.
+- Uploaded files, see the [File Upload](/Web%20Application/File%20Upload/README.md) page.
 
     ```
     POST /v2/user HTTP/1.1
@@ -195,9 +195,9 @@ Unfortunately, block list validation may miss unknown bad values that an attacke
 
 - Define an array of allowed values as a small set of string parameters (e.g. days of a week).
 - Define a list of allowed characters such as `decimal digits` or `letters`.
-- You can use regular expressions to define allowed values, see the [Regular Expressions](/Web%20Application/Regular%20Expressions/README.md) section.
-- Implement file validation according to the [File Upload](/Web%20Application/File%20Upload/README.md) section.
-- Implement email validation according to the [Email Address Validation](/Web%20Application/Authentication/Authentication%20with%20loging%20and%20password/email-address-validation.md).
+- You can use regular expressions to define allowed values, see the [Regular Expressions](/Web%20Application/Regular%20Expressions/README.md) page.
+- Implement file validation according to the [File Upload](/Web%20Application/File%20Upload/README.md) page.
+- Implement email validation according to the [Email Address Validation](/Web%20Application/Authentication/Authentication%20with%20loging%20and%20password/email-address-validation.md) page.
 
 # Server-side validation implementation
 

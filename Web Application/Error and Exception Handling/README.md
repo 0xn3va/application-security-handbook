@@ -1,6 +1,6 @@
 # Overview
 
-This section contains recommendations for handling errors and exceptions.
+This page contains recommendations for handling errors and exceptions.
 
 # General
 
@@ -14,7 +14,7 @@ This section contains recommendations for handling errors and exceptions.
     - An application is returned to the most secure state when an error or exception occurs.
     - An application denies access by default when an error or exception occurs.
     - Error messages are not verbose in nature:
-        - Do **not** pass sensitive data in error messages see [Sensitive Data Management](/Web%20Application/Sensitive%20Data%20Management/README.md).
+        - Do **not** pass sensitive data in error messages see the [Sensitive Data Management](/Web%20Application/Sensitive%20Data%20Management/README.md) page.
         - Do **not** include a stack trace in error messages and HTTP responses.
         - Do **not** pass server configuration information (name, version, etc.) in error messages.
 
@@ -54,7 +54,7 @@ try {
 </details>
 
 - Do **not** ignore errors in security-related components like crypto modules.
-- Log errors according to the [Logging and Monitoring](/Web%20Application/Logging%20and%20Monitoring/README.md) section.
+- Log errors according to the [Logging and Monitoring](/Web%20Application/Logging%20and%20Monitoring/README.md) page.
 
 # Error and exception handling
 

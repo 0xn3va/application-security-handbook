@@ -1,6 +1,6 @@
 # Overview
 
-This page contains requirements for implementing event logging.
+This page contains requirements for implementing event logging and monitoring.
 
 Event logging is one of the most important components of application security. Lack of logging or its incorrect implementation may lead to the inability to detect and investigate security incidents.
 
@@ -103,11 +103,11 @@ Event logging is one of the most important components of application security. L
 
 - Implement **only** Create and Read from the CRUD operations to work with logs.
 - Do **not** exclude any events from "known" event sources like penetration testers, auditors, internal systems, "trusted" third-party components or systems, search engine robots, uptime/process and other remote monitoring systems, etc. Add new property in event classification for such events to filter them out later.
-- Implement input validation of event data, see the [Input Validation](/Web%20Application/Input%20Validation/README.md) section.
+- Implement input validation of event data, see the [Input Validation](/Web%20Application/Input%20Validation/README.md) page.
 - Implement protection against log injection attacks. Make sure carriage return (CR), line feed (LF) and delimiter characters are sanitized. In other words, an attacker is not able to split a log and add a fake log record.
-- If logs are written to a database implement SQL injection protection, see the [SQL Injection (SQLi)](/Web%20Application/Vulnerability%20Mitigation/SQL%20Injection/README.md) section.
-- Comply with the requirements from the [Sensitive Data Management](/Web%20Application/Sensitive%20Data%20Management/README.md) section.
-- Comply with the requirements from the [Error and Exception Handling](/Web%20Application/Error%20and%20Exception%20Handling/README.md) section.
+- If logs are written to a database implement SQL injection protection, see the [SQL Injection (SQLi)](/Web%20Application/Vulnerability%20Mitigation/SQL%20Injection/README.md) page.
+- Comply with the requirements from the [Sensitive Data Management](/Web%20Application/Sensitive%20Data%20Management/README.md) page.
+- Comply with the requirements from the [Error and Exception Handling](/Web%20Application/Error%20and%20Exception%20Handling/README.md) page.
 
 <div align="left">
 <img src="/.gitbook/assets/type-advanced-icon.svg">
