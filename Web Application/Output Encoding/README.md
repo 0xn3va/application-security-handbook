@@ -56,6 +56,7 @@ HTML Context is when untrusted data is displayed between two HTML tags such as `
 | `/` | `&#x2F;` | Slash character |
 | `<` | `&lt;` | Less than |
 | `>` | `&gt;` | Greater than |
+
 </details>
 
 <div align="left">
@@ -116,6 +117,7 @@ align, alink, alt, bgcolor, border, cellpadding, cellspacing, class, color, cols
 | `&` | `&amp;` | Ampersand character |
 | `'` | `&apos;` | Single quotation mark (apostrophe) |
 | `<` | `&lt;` | This encoding is used to avoid an input sequence `</` from prematurely terminating a `</script>` block |
+
 </details>
 
 <div align="left">
@@ -174,6 +176,7 @@ The only safe location to display untrusted data within JavaScript is at quoted 
 | `'` | `\x27;` | Single quotation mark (apostrophe) |
 | `/` | `\x2F;` | Slash character |
 | `\` | `\x5C;` | Backslash character |
+
 </details>
 
 <div align="left">
@@ -208,6 +211,7 @@ CSS Context is when untrusted data is displayed within CSS. For example:
 | `'` | `\x27;` | Single quotation mark (apostrophe) |
 | `/` | `\x2F;` | Slash character |
 | `\` | `\x5C;` | Backslash character |
+
 </details>
 
 -  Do **not** use `expression()` function within a CSS property value. In addition, use [input validation](/Web%20Application/Input%20Validation/README.md) to ensure that untrusted data displayed in CSS property value does **not** contain the `expression()` function.
@@ -261,6 +265,7 @@ URL Context is when untrusted data is displayed within an URL. For example:
 | `'` | `%27;` | Single quotation mark (apostrophe) |
 | `/` | `%2F;` | Slash character |
 | `\` | `%5C;` | Backslash character |
+
 </details>
 
 - After URL context encoding, perform [HTML Context](#html-context), [HTML Attribute Context](#html-attribute-context), [JavaScript Context](#javascript-context) or [CSS Context](#css-context), depending the context where the URL is being used.
