@@ -43,10 +43,7 @@ HTML Context is when untrusted data is displayed between two HTML tags such as `
 <img src="/.gitbook/assets/type-base-icon.svg">
 </div>
 
-- All untrusted data that is going to be displayed within an HTML context, must encode all non-alphanumeric characters with their HTML entity before printing.
-
-<details>
-<summary>Example</summary>
+- All untrusted data that is going to be displayed within an HTML context, must encode all non-alphanumeric characters with their HTML entity before printing. Form example:
 
 | Input Character | Encoded Result | Notes |
 | ---- | ---- | ----- |
@@ -56,8 +53,6 @@ HTML Context is when untrusted data is displayed between two HTML tags such as `
 | `/` | `&#x2F;` | Slash character |
 | `<` | `&lt;` | Less than |
 | `>` | `&gt;` | Greater than |
-
-</details>
 
 <div align="left">
 <img src="/.gitbook/assets/type-advanced-icon.svg">
@@ -106,10 +101,7 @@ If an HTML attribute is properly quoted, only a few characters need to be encode
 align, alink, alt, bgcolor, border, cellpadding, cellspacing, class, color, cols, colspan, coords, dir, face, height, hspace, ismap, lang, marginheight, marginwidth, multiple, nohref, noresize, noshade, nowrap, ref, rel, rev, rows, rowspan, scrolling, shape, span, summary, tabindex, title, usemap, valign, value, vlink, vspace, width
 </details>
 
-- All untrusted data that is going to be displayed within an HTML attribute context, must encode all non-alphanumeric characters with their HTML entity before printing.
-
-<details>
-<summary>Example</summary>
+- All untrusted data that is going to be displayed within an HTML attribute context, must encode all non-alphanumeric characters with their HTML entity before printing. For example:
 
 | Input Character | Encoded Result | Notes |
 | ---- | ---- | ----- |
@@ -117,8 +109,6 @@ align, alink, alt, bgcolor, border, cellpadding, cellspacing, class, color, cols
 | `&` | `&amp;` | Ampersand character |
 | `'` | `&apos;` | Single quotation mark (apostrophe) |
 | `<` | `&lt;` | This encoding is used to avoid an input sequence `</` from prematurely terminating a `</script>` block |
-
-</details>
 
 <div align="left">
 <img src="/.gitbook/assets/type-advanced-icon.svg">
@@ -164,10 +154,7 @@ The only safe location to display untrusted data within JavaScript is at quoted 
     - JavaScript event handlers: `onclick()`, `onerror()`, `onmouseover()`.
     - JavaScript functions that parse and execute JavaScript code: `eval()`, `setInterval()`, `setTimeout()`.
 
-- All untrusted data that is going to be displayed within a JavaScript context, must encode all non-alphanumeric characters with their respective hexadecimal notation `\xHH`.
-
-<details>
-<summary>Example</summary>
+- All untrusted data that is going to be displayed within a JavaScript context, must encode all non-alphanumeric characters with their respective hexadecimal notation `\xHH`. For example:
 
 | Input Character | Encoded Result | Notes |
 | ---- | ---- | ----- |
@@ -176,8 +163,6 @@ The only safe location to display untrusted data within JavaScript is at quoted 
 | `'` | `\x27;` | Single quotation mark (apostrophe) |
 | `/` | `\x2F;` | Slash character |
 | `\` | `\x5C;` | Backslash character |
-
-</details>
 
 <div align="left">
 <img src="/.gitbook/assets/type-advanced-icon.svg">
@@ -199,10 +184,7 @@ CSS Context is when untrusted data is displayed within CSS. For example:
 </div>
 
 - Display untrusted data only on CSS property values. Other CSS contexts are unsafe.
-- All untrusted data that is going to be displayed within a CSS context, must encode all non-alphanumeric characters in their respective hexadecimal notation `\xHH`.
-
-<details>
-<summary>Example</summary>
+- All untrusted data that is going to be displayed within a CSS context, must encode all non-alphanumeric characters in their respective hexadecimal notation `\xHH`. For example:
 
 | Input Character | Encoded Result | Notes |
 | ---- | ---- | ----- |
@@ -211,8 +193,6 @@ CSS Context is when untrusted data is displayed within CSS. For example:
 | `'` | `\x27;` | Single quotation mark (apostrophe) |
 | `/` | `\x2F;` | Slash character |
 | `\` | `\x5C;` | Backslash character |
-
-</details>
 
 -  Do **not** use `expression()` function within a CSS property value. In addition, use [input validation](/Web%20Application/Input%20Validation/README.md) to ensure that untrusted data displayed in CSS property value does **not** contain the `expression()` function.
 
@@ -253,10 +233,7 @@ URL Context is when untrusted data is displayed within an URL. For example:
 <img src="/.gitbook/assets/type-base-icon.svg">
 </div>
 
-- Encode all non-alphanumeric characters with their percentage-encoding hexadecimal representation `%xx`.
-
-<details>
-<summary>Example</summary>
+- Encode all non-alphanumeric characters with their percentage-encoding hexadecimal representation `%xx`. For example:
 
 | Input Character | Encoded Result | Notes |
 | ---- | ---- | ----- |
@@ -265,8 +242,6 @@ URL Context is when untrusted data is displayed within an URL. For example:
 | `'` | `%27;` | Single quotation mark (apostrophe) |
 | `/` | `%2F;` | Slash character |
 | `\` | `%5C;` | Backslash character |
-
-</details>
 
 - After URL context encoding, perform [HTML Context](#html-context), [HTML Attribute Context](#html-attribute-context), [JavaScript Context](#javascript-context) or [CSS Context](#css-context), depending the context where the URL is being used.
 - Do **not** display untrusted data within the `javascript:` URL scheme in URL context. In addition, use [input validation](/Web%20Application/Input%20Validation/README.md) to ensure that untrusted data displayed in URL context does **not** contain the `javascript:` URL scheme.
