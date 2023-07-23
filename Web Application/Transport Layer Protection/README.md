@@ -74,10 +74,10 @@ You can use [https://ssl-config.mozilla.org](https://ssl-config.mozilla.org/) to
 <img src="/.gitbook/assets/type-base-icon.svg">
 </div>
 
-- Use only cryptographically strong algorithms to create a signature, see the [Encryption](/Web%20Application/Cryptography/encryption.md) page.
-- Generate keys of the proper size to provide the desired level of security, see the [Encryption](/Web%20Application/Cryptography/encryption.md) page.
-- Comply with requirements from the [Cryptographic Keys Management](/Web%20Application/Cryptography/cryptographic-keys-management.md) page.
-- Use strong cryptographic hashing algorithms such as hashing algorithms from the `SHA-2` or `SHA-3` family, see the [Hashing](/Web%20Application/Cryptography/hashing.md) page.
+- Use only cryptographically strong algorithms to create a signature, see the [Encryption](/Web%20Application/Cryptography/Encryption/README.md) page.
+- Generate keys of the proper size to provide the desired level of security, see the [Encryption](/Web%20Application/Cryptography/Encryption/README.md) page.
+- Comply with requirements from the [Cryptographic Keys Management](/Web%20Application/Cryptography/Cryptographic%20Keys%20Management/README.md) page.
+- Use strong cryptographic hashing algorithms such as hashing algorithms from the `SHA-2` or `SHA-3` family, see the [Hashing](/Web%20Application/Cryptography/Hashing/README.md) page.
 - Use the [fully qualified domain name (FQDN)](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) of the server as the domain name (or subject) of the certificate.
 - Set the primary [fully qualified domain name (FQDN)](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) to the `commonName (CN)` attribute and the full list of [fully qualified domain names (FQDNs)](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) in the `subjectAlternativeName (SAN)` attribute.
 - Include the `www` subdomain to a certificate.
