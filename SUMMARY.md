@@ -4,6 +4,7 @@
 
 ## Web Application
 
+- [Authorization](/Web%20Application/Authorization/README.md)
 - [Cookie Security](/Web%20Application/Cookie%20Security/README.md)
 - [Error and Exception Handling](/Web%20Application/Error%20and%20Exception%20Handling/README.md)
 - [File Upload](/Web%20Application/File%20Upload/README.md)
