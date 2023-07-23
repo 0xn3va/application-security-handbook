@@ -462,7 +462,6 @@ Below you can find a list of potentially dangerous files. This list is not exhau
 `.config`, `.ini`, `.htaccess`, `.htpasswd`, `.xml`
 {% endtab %}
 
-{% tabs %}
 {% tab title="Compressed" %}
 
 **Extensions**
