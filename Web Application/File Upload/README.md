@@ -240,7 +240,7 @@ If the main domain is `website.local`, use a separate domain such as `user-conte
 </div>
 
 - Allow file uploads **only** for authenticated users.
-- Validate a user has the necessary permissions to upload files before uploading them.
+- Validate a user has the necessary permissions to upload files.
 - Comply with the requirements from the [Authorization](/Web%20Application/Authorization/README.md) page.
 - Implement protection against Cross-Site Request Forgery (CSRF) attacks for file upload functionality, see the [Vulnerability Mitigation: Cross-Site Request Forgery (CSRF)](/Web%20Application/Vulnerability%20Mitigation/Cross-Site%20Request%20Forgery%20(CSRF)/README.md) page.
 
@@ -549,3 +549,7 @@ Below you can find a list of potentially dangerous files. This list is not exhau
 - `application/x-python-code`
 {% endtab %}
 {% endtabs %}
+
+# References
+
+- [OWASP Cheat Sheet Series: File Upload Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html)
