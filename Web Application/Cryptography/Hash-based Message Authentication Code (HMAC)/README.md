@@ -12,14 +12,6 @@ This page contains recommendations for using a Hash-based message authentication
 - Comply with requirements from the [Cryptography: Cryptographic Keys Management](/Web%20Application/Cryptography/Cryptographic%20Keys%20Management/README.md) page when generating and storing a secret key.
 - Use a secret key of length 16+ bytes.
 - The length of a secret key does **not** exceed a hash block size.
-
-| Hash algorithm | Block size, bytes |
-| ---- | ---- |
-| SHA-256 | 64 |
-| SHA-512 | 128 |
-| SHA3-256 | 136 |
-| SHA3-512 | 72 |
-
 - You can use HMAC to check the integrity (signature) of messages between internal systems.
 - Do **not** use HMAC to integrate with a third-party system, use digital signatures.
 
