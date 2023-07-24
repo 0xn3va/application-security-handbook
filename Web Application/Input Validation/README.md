@@ -197,7 +197,7 @@ Unfortunately, block list validation may miss unknown bad values that an attacke
 - Define a list of allowed characters such as `decimal digits` or `letters`.
 - You can use regular expressions to define allowed values, see the [Regular Expressions](/Web%20Application/Regular%20Expressions/README.md) page.
 - Implement file validation according to the [File Upload](/Web%20Application/File%20Upload/README.md) page.
-- Implement email validation according to the [Email Address Validation](/Web%20Application/Authentication/Authentication%20with%20loging%20and%20password/email-address-validation.md) page.
+- Implement email validation according to the [Authentication: Email Address Validation](/Web%20Application/Authentication/Authentication%20with%20loging%20and%20password/email-address-validation.md) page.
 
 # Server-side validation implementation
 

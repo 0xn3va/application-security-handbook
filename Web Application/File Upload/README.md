@@ -139,7 +139,7 @@ Function [DetectContentType()](https://pkg.go.dev/net/http#DetectContentType) at
 <img src="/.gitbook/assets/type-base-icon.svg">
 </div>
 
-- Use Universal Unique Identifier (UUID) as a name for uploaded files, see the [Universal Unique Identifier (UUID)](/Web%20Application/Cryptography/Universal%20Unique%20Identifier%20(UUID)/README.md) page.
+- Use Universal Unique Identifier (UUID) as a name for uploaded files, see the [Cryptography: Universal Unique Identifier (UUID)](/Web%20Application/Cryptography/Universal%20Unique%20Identifier%20(UUID)/README.md) page.
 
 <details>
 <summary>Clarification</summary>
@@ -362,7 +362,7 @@ Moreover, metadata can be used by an attacker to deliver malicious payloads.
 <img src="/.gitbook/assets/type-advanced-icon.svg">
 </div>
 
-- Insert random noise into image content, see the [Random Generators](/Web%20Application/Cryptography/Random%20Generators/README.md) page.
+- Insert random noise into image content, see the [Cryptography: Random Generators](/Web%20Application/Cryptography/Random%20Generators/README.md) page.
 
 <details>
 <summary>Example</summary>

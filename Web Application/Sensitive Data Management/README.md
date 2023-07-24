@@ -44,7 +44,7 @@ Payment cardholder data.
 
 - Do **not** send sensitive data to analytics.
 - Store sensitive data in plain text **only** in a database. Exceptions:
-    - Passwords, store passwords according to the [Password storage](/Web%20Application/Authentication/Authentication%20with%20loging%20and%20password/password-storage.md) page.
+    - Passwords, store passwords according to the [Authentication: Password storage](/Web%20Application/Authentication/Authentication%20with%20loging%20and%20password/password-storage.md) page.
     - `cvv2/cvc2` and `PIN` codes of payment cards. This data can not be stored in a database in any form if an application is not PCI DSS compliant.
 
 # Data logging
