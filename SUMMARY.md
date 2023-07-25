@@ -4,6 +4,18 @@
 
 ## Web Application
 
+- [Authentication](/Web%20Application/Authentication/README.md)
+    - [Authentication with Login and Password](/Web%20Application/Authentication/Authentication%20with%20Login%20and%20Password/README.md)
+    - [Authentication with Phone Number](/Web%20Application/Authentication/Authentication%20with%20Phone%20Number/README.md)
+    - [OAuth 2.0 Authentication](/Web%20Application/Authentication/OAuth%202.0%20Authentication/README.md)
+    - [Multi-factor Authentication](/Web%20Application/Authentication/Multi-factor%20Authentication/README.md)
+    - [Default Passwords](/Web%20Application/Authentication/Default%20Passwords/README.md)
+    - [Password Change](/Web%20Application/Authentication/Password%20Change/README.md)
+    - [Password Policy](/Web%20Application/Authentication/Password%20Policy/README.md)
+    - [Password Reset](/Web%20Application/Authentication/Password%20Reset/README.md)
+    - [Password Storage](/Web%20Application/Authentication/Password%20Storage/README.md)
+    - [One Time Password (OTP)](/Web%20Application/Authentication/One%20Time%20Password%20(OTP)/README.md)
+    - [Email Address Confirmation](/Web%20Application/Authentication/Email%20Address%20Confirmation/README.md)
 - [Authorization](/Web%20Application/Authorization/README.md)
 - [Cookie Security](/Web%20Application/Cookie%20Security/README.md)
 - [Cryptography](/Web%20Application/Cryptography/README.md)
