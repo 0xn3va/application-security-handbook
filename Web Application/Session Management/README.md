@@ -21,7 +21,6 @@ There are two approaches to session management: **Stateful** and **Stateless**.
 - Use up-to-date and well-known frameworks and libraries that implement session management.
 - Review and change the default configuration of the framework or library you are using to enhance its security.
 - Consider session IDs as untrusted data, as any other user input.
-
 - Implement an idle or inactivity timeout for every session.
 
 <details>
