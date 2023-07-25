@@ -16,9 +16,9 @@ This page contains recommendations for validation and confirmation email address
         - backticks `` ` ``
         - single quotes `'`
         - double quotes `"`
-        - null bytes `\0`
-        - new line `\n`
-        - new page `\r`
+        - null bytes `\x00`
+        - new line `\x0A`
+        - new page `\x0D`
         - comma `,`
         - semicolon `:`
 
