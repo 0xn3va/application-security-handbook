@@ -142,3 +142,7 @@ func getUserData(oauth2.Token *token) {
 ```
 {% endtab %}
 {% endtabs %}
+
+# References
+
+- [OWASP Cheat Sheet Series: Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#logging-and-monitoring)

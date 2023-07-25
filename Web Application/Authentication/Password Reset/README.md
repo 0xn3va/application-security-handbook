@@ -72,3 +72,7 @@ This page contains recommendations for the implementation of password reset func
 
 - Use a time-based one-time password generated on the user side for confirmation of the password reset.
 - Comply with the requirements from the [Authentication: One Time Password (OTP)](/Web%20Application/Authentication/One%20Time%20Password%20(OTP)/README.md) page.
+
+# References
+
+- [OWASP Cheat Sheet Series: Forgot Password Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)

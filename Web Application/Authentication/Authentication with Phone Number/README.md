@@ -38,3 +38,7 @@ This page contains recommendations for the implementation of the authentication 
 
 - Generate an OTP on the client side using a TOTP algorithm, see the [Authentication: One Time Password (OTP)](/Web%20Application/Authentication/One%20Time%20Password%20(OTP)/README.md) page.
 - Notify a user via an available communication channel (email, push, SMS, etc.) about successful login under their account from an unknown location, browser, client, etc.
+
+# References
+
+- [OWASP Cheat Sheet Series: Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#logging-and-monitoring)

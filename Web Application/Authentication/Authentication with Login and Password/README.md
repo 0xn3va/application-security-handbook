@@ -89,3 +89,7 @@ In case of password compromise, there should be a way to reset passwords for a b
 
 - Terminates all active sessions after a successful password change and reset. Do the termination across an application, federated login (if present), and any relying parties.
 - Notify users if their password has been changed or restored. Add the `What should I do if it wasn't me?` section with a link to a password reset page and other relative pages (multi-factor authentication set-up, support contacts, etc.).
+
+# References
+
+- [OWASP Cheat Sheet Series: Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#logging-and-monitoring)
