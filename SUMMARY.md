@@ -31,6 +31,7 @@
 - [Logging and Monitoring](/Web%20Application/Logging%20and%20Monitoring/README.md)
 - [Output Encoding](/Web%20Application/Output%20Encoding/README.md)
 - [Sensitive Data Management](/Web%20Application/Sensitive%20Data%20Management/README.md)
+- [Session Management](/Web%20Application/Session%20Management/README.md)
 - [Transport Layer Protection](/Web%20Application/Transport%20Layer%20Protection/README.md)
 - [Vulnerability Mitigation](/Web%20Application/Vulnerability%20Mitigation/README.md)
     - [SQL Injection (SQLi)](/Web%20Application/Vulnerability%20Mitigation/SQL%20Injection/README.md)
