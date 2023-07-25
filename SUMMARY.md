@@ -34,4 +34,8 @@
 - [Session Management](/Web%20Application/Session%20Management/README.md)
 - [Transport Layer Protection](/Web%20Application/Transport%20Layer%20Protection/README.md)
 - [Vulnerability Mitigation](/Web%20Application/Vulnerability%20Mitigation/README.md)
+    - [Cross-Site Request Forgery (CSRF)](/Web%20Application/Vulnerability%20Mitigation/Cross-Site%20Request%20Forgery%20(CSRF)/README.md)
+    - [Mass Parameter Assignment](/Web%20Application/Vulnerability%20Mitigation/Mass%20Parameter%20Assignment/README.md)
+    - [Parameter Pollution](/Web%20Application/Vulnerability%20Mitigation/Parameter%20Pollution/README.md)
     - [SQL Injection (SQLi)](/Web%20Application/Vulnerability%20Mitigation/SQL%20Injection/README.md)
+    - [XML External Entity (XXE) Injection](/Web%20Application/Vulnerability%20Mitigation/XML%20External%20Entity%20(XXE)%20Injection/README.md)
