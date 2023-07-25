@@ -8,7 +8,7 @@ This page contains recommendations for choosing a hashing algorithm.
 <img src="/.gitbook/assets/type-base-icon.svg">
 </div>
 
-- If you need to hash passwords see the the [Authentication: Password storage](/Web%20Application/Authentication/Authentication%20with%20loging%20and%20password/password-storage.md) page.
+- If you need to hash passwords see the the [Authentication: Password Storage](/Web%20Application/Authentication/Password%20Storage/README.md) page.
 - For other data, use a hashing algorithm from the `SHA-2` or `SHA-3` family.
 - Do **not** use vulnerable hashing algorithms from the list below. You can find examples of collision attacks at [https://github.com/corkami/collisions](https://github.com/corkami/collisions).
 

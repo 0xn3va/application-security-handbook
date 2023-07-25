@@ -12,9 +12,11 @@ This page contains recommendations for choosing an encryption algorithm, key len
 - Use only public algorithms that have been proven to be strong, such as `AES`, `RSA` or `Curve25519`.
 - The main criterion for choosing an encryption algorithm and the key length is the required level of security. That is, the longer data must remain encrypted, the stronger algorithm must be used. The strength of an algorithm is determined by the presence of effective attacks on it and the key length used. `Table 2: Comparable strengths` from the [Recommendation for Key Management](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf) compares security levels for approved algorithms and key lengths.
 - The implementation of a cryptographic algorithm should be widely distributed and developed with the involvement of a cryptographic expert.
-- Use cryptographic strong random number generators to generate all random values that are used as cryptographic parameters such as initialization vectors, nonces, keys, etc., see the [Cryptography: Random Generators](/Web%20Application/Cryptography/Random%20Generators/README.md) page.
+- Use cryptographically strong random number generators to generate all random values that are used as cryptographic parameters such as initialization vectors, nonces, keys, etc., see the [Cryptography: Random Generators](/Web%20Application/Cryptography/Random%20Generators/README.md) page.
 - Use nonces, initialization vectors, and other single-use numbers only once with a given encryption key.
-- Comply with the requirements from the [Cryptography: Cryptographic Keys Management](/Web%20Application/Cryptography/Cryptographic%20Keys%20Management/README.md) page.
+- Comply with requirements from the [Cryptography: Cryptographic Keys Management](/Web%20Application/Cryptography/Cryptographic%20Keys%20Management/README.md) page.
+- Log errors in cryptography components, see the [Logging and Monitoring](/Web%20Application/Logging%20and%20Monitoring/README.md) page.
+- Comply with requirements from the [Error and Exception Handling](/Web%20Application/Error%20and%20Exception%20Handling/README.md) page.
 
 <div align="left">
 <img src="/.gitbook/assets/type-advanced-icon.svg">

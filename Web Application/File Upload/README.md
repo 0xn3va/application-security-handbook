@@ -19,6 +19,7 @@ This page contains recommendations for the implementation of secure file upload 
 - Set file size limits and implement upload rate limits, see the [Size and rate limits](#size-and-rate-limits) section.
 - Log successful and unsuccessful file upload attempts and access to files events, see the [Logging and Monitoring](/Web%20Application/Logging%20and%20Monitoring/README.md) page.
 - Implement Content Disarm and Reconstruction (CDR) for [potentially dangerous file types](#dangerous-file-types), see the [Content Disarm and Reconstruction (CDR)](#content-disarm-and-reconstruction-cdr) section.
+- Comply with requirements from the [Error and Exception Handling](/Web%20Application/Error%20and%20Exception%20Handling/README.md) page.
 
 # File name sanitization
 

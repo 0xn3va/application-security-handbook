@@ -6,7 +6,7 @@ This section contains recommendations for implementing and using functionality r
 Main rule of cryptography is do **not** invent your own cryptography. It can definitely be hacked.
 {% endhint %}
 
-General practices and required minimum key size for various scenarios:
+# General practices
 
 | Scenario | Algorithm (base) | Algorithm (advanced) |
 | ---- | ---- | ----- |
