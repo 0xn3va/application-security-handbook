@@ -8,7 +8,7 @@ This section contains recommendations for implementing output encoding.
 <img src="/.gitbook/assets/type-base-icon.svg">
 </div>
 
-In many scenarios, an application displays data that was gathered from untrusted sources such as user input. This can lead to vulnerabilities than an adversary leverage to perform attacks such as Cross-Site Scripting. To mitigate such security issues untrusted output must be encoded properly depending on the context it is being used.
+In many scenarios, an application displays data that was gathered from untrusted sources such as user input. This can lead to vulnerabilities that an attacker leverage to perform attacks such as Cross-Site Scripting. To mitigate such security issues untrusted output must be encoded properly depending on the context it is being used.
 
 - Perform comprehensive input validation for each request, see the [Input Validation](/Web%20Application/Input%20Validation/README.md) page.
 - Perform output encoding according to the context of any untrusted data before displaying it in a user interface (web browser, mobile app).
@@ -29,7 +29,7 @@ In many scenarios, an application displays data that was gathered from untrusted
 <img src="/.gitbook/assets/type-advanced-icon.svg">
 </div>
 
--  Use your framework's default output encoding or use a well-vetted output encoding library for each context.
+- Use your framework's default output encoding or use a well-vetted output encoding library for each context.
 
 # HTML Context
 
@@ -43,7 +43,7 @@ HTML Context is when untrusted data is displayed between two HTML tags such as `
 <img src="/.gitbook/assets/type-base-icon.svg">
 </div>
 
-- All untrusted data that is going to be displayed within an HTML context, must encode all non-alphanumeric characters with their HTML entity before printing. Form example:
+- All untrusted data that is going to be displayed within an HTML context, must encode all non-alphanumeric characters with their HTML entity before printing. For example:
 
 | Input Character | Encoded Result | Notes |
 | ---- | ---- | ----- |
@@ -96,7 +96,7 @@ If an HTML attribute is properly quoted, only a few characters need to be encode
 - Do **not** use not-safe HTML attributes with untrusted data even after output escaping.
 
 <details>
-<summary>List of not-safe HTML attributes</summary>
+<summary>List of safe HTML attributes</summary>
 
 align, alink, alt, bgcolor, border, cellpadding, cellspacing, class, color, cols, colspan, coords, dir, face, height, hspace, ismap, lang, marginheight, marginwidth, multiple, nohref, noresize, noshade, nowrap, ref, rel, rev, rows, rowspan, scrolling, shape, span, summary, tabindex, title, usemap, valign, value, vlink, vspace, width
 </details>
