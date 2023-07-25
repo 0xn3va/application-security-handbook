@@ -15,6 +15,12 @@ This page contains recommendations for the implementation of the authentication 
 - Require authentication from a user when changing a phone number. A user should enter an OTP for an old phone number and a new one.
 - Comply with requirements from the [Error and Exception Handling](/Web%20Application/Error%20and%20Exception%20Handling/README.md) page.
 - Log all authentication decisions (successful and not successful), see the [Logging and Monitoring](/Web%20Application/Logging%20and%20Monitoring/README.md) page.
+
+    - Successful authentication
+    - Failed authentication
+    - Successful phone number change
+    - Failed phone number change
+
 - Limit the number of attempts to sign in for a certain period, see the [Vulnerability Mitigation: Brute-force](/Web%20Application/Vulnerability%20Mitigation/Brute-force/README.md) page.
 - Limit the possibility of resending OTPs. In other words, each subsequent send of an OTP must increase the timeout when the OTP resend is prohibited. The timeout is reset by a successful login to an application. See the [Vulnerability Mitigation: Brute-force](/Web%20Application/Vulnerability%20Mitigation/Brute-force/README.md) page.
 - Implement injection protection for login and password arguments, see:
