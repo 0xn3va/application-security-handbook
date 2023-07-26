@@ -20,7 +20,7 @@ This page contains recommendations for the implementation of OAuth 2.0 authentic
 - Use the `state` parameter of length 16+ bytes.
 - Generate a unique `authorization code` for each authentication attempt.
 - Generate the `authorization code` using a cryptographically strong random generator, see the [Cryptography: Random Generators](/Web%20Application/Cryptography/Random%20Generators/README.md) page.
-- Use an `authorization code` of length 16+ bytes.
+- Use `authorization codes` of length 16+ bytes.
 - Set expiration time for an `authorization code` < 1 hour.
 - Use an authorization code once. Delete an authorization code or transfer it to a final status that prohibits reusing.
 - Do **not** redirect users to URLs specified in the parameters without checking them against an allow list.

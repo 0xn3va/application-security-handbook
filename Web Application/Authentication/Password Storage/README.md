@@ -17,7 +17,7 @@ This page contains recommendations for storing user passwords.
     - [PBKDF2](#pbkdf2)
 
 - Generate a new unique salt for each hash iteration. Do **not** use the same salt for hashing passwords.
-- Use salt of length 32+ bytes.
+- Use salts of length 32+ bytes.
 - Use cryptographically strong random number generators to generate salt, see the [Cryptography: Random Generators](/Web%20Application/Cryptography/Random%20Generators/README.md) page.
 - Comply with requirements from the [Logging and Monitoring](/Web%20Application/Logging%20and%20Monitoring/README.md) page.
 - Comply with requirements from the [Error and Exception Handling](/Web%20Application/Error%20and%20Exception%20Handling/README.md) page.
@@ -46,8 +46,8 @@ Use the following approach to upgrade legacy hashes:
 - Use the `Argon2id` version of the `Argon2` algorithm.
 - Set the minimum memory size to `64 MB` and the minimum number of iterations to `1`. If using that amount of memory `64 MB` is not possible in some contexts increase the time parameter to compensate, for example, the minimum memory size `32 MB` and the minimum number of iterations `2`.
 - Set the degree of parallelism to the number of available CPUs.
-- Use a derived key of length 16+ bytes.
-- Use a salt of length `>=` generated derived key length. Minimal salt length `32` bytes.
+- Use deriveds key of length 16+ bytes.
+- Use salts of length `>=` generated derived key length. Minimal salt length `32` bytes.
 
 {% tabs %}
 {% tab title="Go" %}
@@ -86,8 +86,8 @@ func Argon2Hash(password []byte, salt []byte) []byte {
 | SHA-512 | 120.000 |
 | SHA3-256 | 120.000 |
 
-- Use a derived key of length 16+ bytes.
-- Use a salt of length >= generated derived key length. Minimal salt length `32` bytes.
+- Use derived keys of length 16+ bytes.
+- Use salts of length >= generated derived key length. Minimal salt length `32` bytes.
 
 {% tabs %}
 {% tab title="Go" %}

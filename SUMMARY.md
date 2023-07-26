@@ -18,6 +18,7 @@
     - [Email Address Confirmation](/Web%20Application/Authentication/Email%20Address%20Confirmation/README.md)
 - [Authorization](/Web%20Application/Authorization/README.md)
 - [Concept of Trusted Devices](/Web%20Application/Concept%20of%20Trusted%20Devices/README.md)
+- [Content Security Policy (CSP)](/Web%20Application/Content%20Security%20Policy%20(CSP)/README.md)
 - [Cookie Security](/Web%20Application/Cookie%20Security/README.md)
 - [Cryptography](/Web%20Application/Cryptography/README.md)
     - [Cryptographic Keys Management](/Web%20Application/Cryptography/Cryptographic%20Keys%20Management/README.md)

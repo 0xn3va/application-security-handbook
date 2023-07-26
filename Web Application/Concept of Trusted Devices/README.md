@@ -113,7 +113,7 @@ If one of the following checks fails the **entire** validation fails:
 
 - Use a random token as a device token.
 - Use a cryptographically strong generator to generate a device token, see the [Cryptography: Random Generators](/Web%20Application/Cryptography/Random%20Generators/README.md) page.
-- Use a random token of length 16+ bytes.
+- Use random tokens of length 16+ bytes.
 
 # HMAC-based token
 

@@ -14,7 +14,7 @@ This page contains recommendations for using One-Time Passwords (OTPs).
 - Link an OTP to an individual user in a database.
 - If an application generates OTPs on the server side, limit the number of generation attempts in a certain period, see the [Vulnerability Mitigation: Brute-force](/Web%20Application/Vulnerability%20Mitigation/Brute-force/README.md) page.
 - Limit the number of OTP verification attempts for a certain period, see the [Vulnerability Mitigation: Brute-force](/Web%20Application/Vulnerability%20Mitigation/Brute-force/README.md) page.
-- Use an OTP of length 6+ symbols.
+- Use OTPs of length 6+ symbols.
 - Set a short expiration time for an OTP (~ 5 hours).
 - Make sure the generation of new OTP invalidates previous ones.
 - Store OTPs in a separate database, access to which must be limited. Do **not** store OTPs next to other application data.
@@ -47,7 +47,7 @@ TOTP is an algorithm that generates OTPs based on a shared secret and the curren
 
 - Generate a shared secret using a cryptographically strong random generator, see the [Cryptography: Random Generators](/Web%20Application/Cryptography/Random%20Generators/README.md) page.
 - Use a unique shared secret for each authenticator application (prover). For example, if TOTP is used to generate OTPs for a second-factor authentication, generate a unique shared secret for each TOTP registration.
-- Use a shared secret of length 16+ bytes.
+- Use shared secrets of length 16+ bytes.
 - Set a short expiration time for an OTP (~ 1 minute).
 
 <details>

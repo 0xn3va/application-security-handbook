@@ -49,7 +49,7 @@ This page contains recommendations for the implementation of password reset func
     ```
 
 - Generate a random token using a cryptographically strong random generator, see the [Cryptography: Random Generators](/Web%20Application/Cryptography/Random%20Generators/README.md) page.
-- Use a random token of length 32+ bytes.
+- Use random tokens of length 32+ bytes.
 - Set a short expiration time for a random token (~ 24 hours).
 - Use a random token once. Delete a random token or transfer it to a final status that prohibits reusing.
 - Do **not** rely on the `Host` HTTP header while creating the reset URLs to avoid the [Host Header Injection](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/17-Testing_for_Host_Header_Injection) attack. Either hardcode the URL or validate against a list of trusted domains using an allow list.

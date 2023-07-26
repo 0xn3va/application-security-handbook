@@ -10,7 +10,7 @@ This page contains recommendations for using a Hash-based message authentication
 
 - Comply with requirements from the [Cryptography: Hashing](/Web%20Application/Cryptography/Hashing/README.md) page when choosing a hash algorithm.
 - Comply with requirements from the [Cryptography: Cryptographic Keys Management](/Web%20Application/Cryptography/Cryptographic%20Keys%20Management/README.md) page when generating and storing a secret key.
-- Use a secret key of length 16+ bytes.
+- Use secret keys of length 16+ bytes.
 - The length of a secret key does **not** exceed a hash block size.
 
 | Hash algorithm | Block size, bytes |
