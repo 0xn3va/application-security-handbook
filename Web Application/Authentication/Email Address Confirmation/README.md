@@ -44,7 +44,7 @@ This page contains recommendations for validation and confirmation email address
 - Send a confirmation URL to a user's email and pass a random token in the query string of the URL. For example:
 
     ```
-    https://website.com/account/email/confirm?token=GiOzXAwlZ17NsW4CkVV8MQXtiQN9cWiY
+    https://website.local/account/email/confirm?token=GiOzXAwlZ17NsW4CkVV8MQXtiQN9cWiY
     ```
 
 - Generate a random token using a cryptographically strong random generator, see the [Cryptography: Random Generators](/Web%20Application/Cryptography/Random%20Generators/README.md) page.
