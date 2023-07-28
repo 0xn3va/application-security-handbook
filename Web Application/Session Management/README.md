@@ -98,6 +98,12 @@ An absolute timeout defines the maximum amount of time a session can be active, 
 </div>
 
 - Use JSON Web Tokens (JWT) to implement stateless session management, see the [JSON Web Token (JWT)](/Web%20Application/JSON%20Web%20Token%20(JWT)/README.md) page.
+- Use the `exp` claim to implement a session timeout.
+- Use the following algorithm to implement the logout functionality:
+
+    - Store the `jti` claim (unique token identifier) for each issued token.
+    - If a user logged out from an application, move the `jti` to a list of blocked tokens.
+    - Remove a token from the block list when a token expires (check the `exp` claim to determine if a token has expired).
 
 # References
 
