@@ -42,5 +42,6 @@
     - [Cross-Site Scripting (XSS)](/Web%20Application/Vulnerability%20Mitigation/Cross-Site%20Scripting%20(XSS)/README.md)
     - [Mass Parameter Assignment](/Web%20Application/Vulnerability%20Mitigation/Mass%20Parameter%20Assignment/README.md)
     - [Parameter Pollution](/Web%20Application/Vulnerability%20Mitigation/Parameter%20Pollution/README.md)
+    - [Path Traversal](/Web%20Application/Vulnerability%20Mitigation/Path%20Traversal/README.md)
     - [SQL Injection (SQLi)](/Web%20Application/Vulnerability%20Mitigation/SQL%20Injection/README.md)
     - [XML External Entity (XXE) Injection](/Web%20Application/Vulnerability%20Mitigation/XML%20External%20Entity%20(XXE)%20Injection/README.md)

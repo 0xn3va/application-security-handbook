@@ -17,6 +17,7 @@ This page contains recommendations for the implementation of secure file upload 
 
 - Follow file storage best practices, see the [File storage](#file-storage) section.
 - Set file size limits and implement upload rate limits, see the [Size and rate limits](#size-and-rate-limits) section.
+- Implement protection against path traversal attacks, see the [Vulnerability Mitigation: Path Traversal](/Web%20Application/Vulnerability%20Mitigation/Path%20Traversal/README.md) page.
 - Log successful and unsuccessful file upload attempts and access to files events, see the [Logging and Monitoring](/Web%20Application/Logging%20and%20Monitoring/README.md) page.
 - Implement Content Disarm and Reconstruction (CDR) for [potentially dangerous file types](#dangerous-file-types), see the [Content Disarm and Reconstruction (CDR)](#content-disarm-and-reconstruction-cdr) section.
 - Comply with requirements from the [Error and Exception Handling](/Web%20Application/Error%20and%20Exception%20Handling/README.md) page.
