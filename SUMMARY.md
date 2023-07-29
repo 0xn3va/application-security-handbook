@@ -38,6 +38,7 @@
 - [Transport Layer Protection](/Web%20Application/Transport%20Layer%20Protection/README.md)
 - [Vulnerability Mitigation](/Web%20Application/Vulnerability%20Mitigation/README.md)
     - [Brute-force](/Web%20Application/Vulnerability%20Mitigation/Brute-force/README.md)
+    - [Command Injection](/Web%20Application/Vulnerability%20Mitigation/Command%20Injection/README.md)
     - [Cross-Site Request Forgery (CSRF)](/Web%20Application/Vulnerability%20Mitigation/Cross-Site%20Request%20Forgery%20(CSRF)/README.md)
     - [Cross-Site Scripting (XSS)](/Web%20Application/Vulnerability%20Mitigation/Cross-Site%20Scripting%20(XSS)/README.md)
     - [Mass Parameter Assignment](/Web%20Application/Vulnerability%20Mitigation/Mass%20Parameter%20Assignment/README.md)
