@@ -118,7 +118,7 @@ Example: 'v' + '_' * 3456 + '!'
 
 # Linear time regular expression matching implementation
 
-There is the [re2](https://github.com/google/re2) engine that provides linear time expression matching. Try to find a library that based on the [re2](https://github.com/google/re2) engine.
+There is the [re2](https://github.com/google/re2) engine that provides linear time expression matching. Try to find a library that is based on the [re2](https://github.com/google/re2) engine.
 
 {% tabs %}
 {% tab title="Go" %}
@@ -147,7 +147,7 @@ func main() {
 
 {% tab title="Java" %}
 
-Use the [re2j](https://github.com/google/re2j) package is a port of C++ [re2](https://github.com/google/re2) to pure Java.
+Use the [re2j](https://github.com/google/re2j) package which is a port of C++ [re2](https://github.com/google/re2) to pure Java.
 
 ```java
 import com.google.re2j.Matcher;
