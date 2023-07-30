@@ -130,11 +130,17 @@ Deny access by default to mitigate/avoid the effects of such pitfalls.
 Develop an access control policy as a separate component that can be used by other components to validate permissions. Check permissions with this component, for example, inside controllers. Try to avoid checking permissions in multiple layers, for example, controllers and the data layer.
 </details>
 
-- Create unit and integration tests that validate enrolled access control policy. Make sure that the permissions mapped out in accordance with business flows are being correctly enforced.
+- Create unit and integration tests that validate enrolled access control policy.
+
+    - Make sure that the permissions mapped out in accordance with business flows are being correctly enforced. 
+    - Create tests based on the actors (users) and objects involved in the authorization process.
+    - Create tests that explicitly check that certain actions can not be performed by specified actors (users).
+
 - Avoid exposing identifiers to users when possible. For example, use `/user/orders` instead of `/users/1337/orders` to fetch orders for a current user.
 - Do **not** provide access based on knowledge of an entity ID. Even if an ID is long and random enough to be unguessable, always check permissions before providing access.
 - Make sure static content is covered by access control policy when appropriate.
 - Handle all exceptions, errors and authorization failures no matter how unlikely they seem, see the [Error and Exception Handling](/Web%20Application/Error%20and%20Exception%20Handling/README.md) page.
+- Do **not** reveal the existence of a requested resource via the HTTP response code. Return `404 Not Found` if an authorization check fails. `403 Forbidden` might be appropriate if you need to display a specific message to a user about why they can not access a resource.
 - Log authorization attempts, at least authorization failures and operations requiring elevated privileges, see the [Logging and Monitoring](/Web%20Application/Logging%20and%20Monitoring/README.md) page.
 
 <div align="left">
@@ -143,3 +149,8 @@ Develop an access control policy as a separate component that can be used by oth
 
 - Regularly review an access control policy to avoid "privilege creep" and possible abuse of a policy for privilege escalation.
 - Document an access control policy. It must include each user role, actions that an application supports, and permissions that are required to perform those actions.
+
+# References
+
+- [OWASP Cheat Sheet Series: Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
+- [GitLab Docs: Secure coding development guidelines - Permissions](https://docs.gitlab.com/ee/development/secure_coding_guidelines.html#permissions)
