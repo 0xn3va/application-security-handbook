@@ -19,7 +19,7 @@ Many regex engines support backtracking that causes them to work very slowly in 
 
 - Do **not** use `multi-line` matching mode in regexes that are used for validation. Otherwise, make sure that full string matching `^...$` works as expected or rewrite regexes using more specific expressions like `\A...\z`.
 
-    Remember in some engines `multi-line` matching mode is a default mode, for example, the built-in regex engine in Ruby.
+    - Remember in some engines `multi-line` matching mode is a default mode, for example, the built-in regex engine in Ruby.
 
 <details>
 <summary>Clarification</summary>
