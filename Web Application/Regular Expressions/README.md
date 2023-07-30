@@ -78,7 +78,7 @@ p.match('137\nabc') is not None
 </details>
 
 - Implement input validation for strings for matching, at least for string length and allowed characters, see the [Input Validation](/Web%20Application/Input%20Validation/README.md) page.
-- Use the following practices to simplify regular expressions and reduce the likelihood of problems with backtracking:
+- Use the following practices to simplify regular expressions and reduce the likelihood of problems with catastrophic backtracking:
 
     - Avoid nested quantifiers, for example `(a+)+`.
     - Try to be as precise as possible and avoid the `.` pattern.
@@ -86,9 +86,9 @@ p.match('137\nabc') is not None
     - Simplify character ranges, for example `[ab]` instead of `[a-z0-9]`.
 
 <details>
-<summary>Detecting backtracking loops</summary>
+<summary>Detecting Catastrophic backtracking</summary>
 
-You can use [doyensec/regexploit](https://github.com/doyensec/regexploit) to detect backtracking loops in your regexes that lead to ReDoS.
+You can use [doyensec/regexploit](https://github.com/doyensec/regexploit) to detect Catastrophic backtracking in your regexes that lead to ReDoS.
 
 **regexploit does not guarantee the detection of 100% vulnerable regexes, this is just one of the relatively easy ways to check your regex**
 
