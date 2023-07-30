@@ -9,12 +9,12 @@ This page contains recommendations for using regular expressions.
 </div>
 
 - Do **not** use regular expressions if there is a clean non-regex solution, for example, searching for a substring or using `if` conditions.
-- Use regular expression engines that provide linear time expression matching, at least for user-provided regular expressions or matching "hard-coded" expressions against user-controlled data.
+- Use regular expression engines that provide linear time expression matching at least for user-provided regular expressions or matching "hard-coded" expressions against user-controlled data, see the [Linear time regular expression matching implementation](#linear-time-regular-expression-matching-implementation) section.
 
 <details>
 <summary>Clarification</summary>
 
-Many regex engines support backtracking that causes them to work very slowly in some cases (exponentially related to input size), see the [Regular Expression Denial of Service (ReDoS)](/Web%20Application/Vulnerability%20Mitigation/Regular%20Expression%20Denial%20of%20Service%20(ReDoS)/README.md) page.
+Many regex engines support backtracking that causes them to work very slowly in some cases (exponentially related to input size), see the [Vulnerability Mitigation: Regular Expression Denial of Service (ReDoS)](/Web%20Application/Vulnerability%20Mitigation/Regular%20Expression%20Denial%20of%20Service%20(ReDoS)/README.md) page.
 </details>
 
 - Do **not** use `multi-line` matching mode in regexes that are used for validation. Otherwise, make sure that full string matching `^...$` works as expected or rewrite regexes using more specific expressions like `\A...\z`.
@@ -114,7 +114,7 @@ Example: 'v' + '_' * 3456 + '!'
 <img src="/.gitbook/assets/type-advanced-icon.svg">
 </div>
 
-- Use regular expression engines that provide linear time expression matching for matching all regular expressions.
+- Use regular expression engines that provide linear time expression matching for matching all regular expressions, see the [Linear time regular expression matching implementation](#linear-time-regular-expression-matching-implementation) section.
 
 # Linear time regular expression matching implementation
 
