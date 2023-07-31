@@ -1,6 +1,6 @@
 # Summary
 
-- [Application Security Best Practices](INTRODUCTION.md)
+- [Application Security Handbook](INTRODUCTION.md)
 
 ## Web Application
 

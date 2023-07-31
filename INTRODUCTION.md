@@ -1,8 +1,8 @@
-# Application Security Best Practices
+# Application Security Handbook
 
 A knowledge base of best practices for application security.
 
-Feel free to point out mistakes and write your ideas [here](https://github.com/0xn3va/application-security-best-practices/issues/new).
+Feel free to point out mistakes and write your ideas [here](https://github.com/0xn3va/application-security-handbook/issues/new).
 
 ## Overview
 
@@ -21,9 +21,11 @@ Please note that some requirements may have a negative impact on business proces
 
 ## Why does it exist?
 
-There are many resources where you can find the best practices for secure development like [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org) or [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/). However, all of these resources are more focused on the security guys. In other words, for developers, these resources are too cumbersome that require a huge amount of time to turn into understandable development requirements.
+There are many resources where you can find the best practices for secure development like [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org) or [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/). However, all of these resources are more focused on the infosec guys. From the developer's point of view, these resources are too cumbersome and require their processing into understandable development requirements. This project exists precisely to facilitate this work and to provide best practices in the form of requirements that can be directly used in development tasks.
 
-This project exists precisely to facilitate this work and to provide best practices in the form of requirements that can be directly used in development tasks.
+# Credits
+
+- [rodespsan](https://github.com/rodespsan)
 
 [base-icon]: /.gitbook/assets/type-base-icon.svg
 [advanced-icon]: /.gitbook/assets/type-advanced-icon.svg
