@@ -62,10 +62,110 @@ import (
 func Argon2Hash(password []byte, salt []byte) []byte {
     iterations := 1
     memorySize := 64 * 1024
-    threads := 4
+    threads := 1
     keyLength := 32
     return argon2.IDKey(password, salt, iterations, memorySize, threads, keyLength)
 }
+```
+{% endtab %}
+
+{% tab title="Java" %}
+
+Use the [org.bouncycastle.crypto.generators.Argon2BytesGenerator](https://javadoc.io/doc/org.bouncycastle/bcprov-jdk15on/1.68/org/bouncycastle/crypto/generators/Argon2BytesGenerator.html) class from `bouncycastle` to implement `Argon2id` password hashing.
+
+```java
+import java.nio.charset.StandardCharsets;
+import org.bouncycastle.crypto.generators.Argon2BytesGenerator;
+import org.bouncycastle.crypto.params.Argon2Parameters;
+
+public static String argon2idHash(String password, String salt) {
+    int iterations = 1;
+    int memLimit = 64 * 1024;
+    int hashLength = 32;
+    int parallelism = 1;
+    byte[] hash = new byte[hashLength];
+    Argon2Parameters params = new Argon2Parameters
+        .Builder(Argon2Parameters.ARGON2_id)
+        .withVersion(Argon2Parameters.ARGON2_VERSION_13)
+        .withIterations(iterations)
+        .withMemoryAsKB(memLimit)
+        .withParallelism(parallelism)
+        .withSalt(salt.getBytes(StandardCharsets.UTF_8))
+        .build();
+    Argon2BytesGenerator generator = new Argon2BytesGenerator();
+    generator.init(params);
+    generator.generateBytes(password.toCharArray(), hash);
+    return toHex(hash)
+}
+
+private static String toHex(byte[] byteArray) {
+    String hex = "";
+    for (byte i : byteArray) {
+        hex += String.format("%02x", i);
+    }
+    return hex;
+}
+```
+
+If you are using Spring, use the [org.springframework.security.crypto.argon2.Argon2PasswordEncoder](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/crypto/argon2/Argon2PasswordEncoder.html) class from the Spring Security Crypto library that based on `bouncycastle`:
+
+```java
+import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
+
+public static String argon2idHash(String password) {
+    Argon2PasswordEncoder arg2SpringSecurity = createArgon2PasswordEncoder();
+    return arg2SpringSecurity.encode(password);
+}
+
+public static boolean argon2idMatches(String password, String passwordHash) {
+    Argon2PasswordEncoder arg2SpringSecurity = createArgon2PasswordEncoder();
+    return arg2SpringSecurity.matches(password, passwordHash)
+}
+
+private static Argon2PasswordEncoder createArgon2PasswordEncoder() {
+    int iterations = 1;
+    int memLimit = 64 * 1024;
+    int hashLength = 32;
+    int saltLength = 32;
+    int parallelism = 1;
+    return new Argon2PasswordEncoder(saltLength, hashLength, parallelism, memLimit, iterations);
+}
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+
+Use the [argon2](https://www.npmjs.com/package/argon2) package to implement `Argon2id` password hashing.
+
+```javascript
+const argon2 = require('argon2');
+
+async function argon2_hash(password) {
+    return argon2.hash(password);
+}
+
+async function argon2_hash_verify(password, passwordHash) {
+    return argon2.verify(passwordHash, password);
+}
+```
+{% endtab %}
+
+{% tab title="Python" %}
+
+Use the [argon2-cffi](https://github.com/hynek/argon2-cffi) package to implement `Argon2id` password hashing.
+
+```python
+from typing import Literal
+from argon2 import PasswordHasher
+
+def argon2_hash(password: str | bytes) -> str:
+    ph = PasswordHasher()
+    return ph.hash(password)
+
+# Note: argon2_hash_verify raises argon2.exceptions.VerificationError if verification failed
+def argon2_hash_verify(password: str | bytes, passwordHash: str | bytes) -> Literal[True]:
+    ph = PasswordHasher()
+    return ph.verify(passwordHash, password)
 ```
 {% endtab %}
 {% endtabs %}
@@ -92,7 +192,7 @@ func Argon2Hash(password []byte, salt []byte) []byte {
 {% tabs %}
 {% tab title="Go" %}
 
-Use the [golang.org/x/crypto/pbkdf2](https://pkg.go.dev/golang.org/x/crypto/pbkdf2) package to implement PBKDF2 password hashing. 
+Use the [golang.org/x/crypto/pbkdf2](https://pkg.go.dev/golang.org/x/crypto/pbkdf2) package to implement `PBKDF2` password hashing.
 
 ```go
 import (
@@ -105,6 +205,66 @@ func PBKDF2Hash(password []byte, salt []byte) []byte {
     keyLength := 32
     return pbkdf2.Key(password, salt, iterations, keyLength, sha256.New)
 }
+```
+{% endtab %}
+
+{% tab title="Java" %}
+
+Use the [javax.crypto.SecretKeyFactory](https://docs.oracle.com/javase/8/docs/api/javax/crypto/SecretKeyFactory.html) class to implement `PBKDF2` password hashing.
+
+```java
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.SecretKeyFactory;
+import java.nio.charset.StandardCharsets;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+
+public static String pbkdf2Hash(String password, String salt) throws NoSuchAlgorithmException, InvalidKeySpecException {
+    int iterations = 310000;
+    int keyLength = 32 * 8;
+    PBEKeySpec keySpec = new PBEKeySpec(password.toCharArray(), salt.getBytes(StandardCharsets.UTF_8), iterations, keyLength);
+    SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
+    byte[] keyBytes = keyFactory.generateSecret(keySpec).getEncoded();
+    return toHex(keyBytes);
+}
+
+private static String toHex(byte[] byteArray) {
+    String hex = "";
+    for (byte i : byteArray) {
+        hex += String.format("%02x", i);
+    }
+    return hex;
+}
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+
+Use the [crypto](https://nodejs.org/api/crypto.html) package to implement `PBKDF2` password hashing.
+
+```javascript
+const {
+    pbkdf2,
+} = await import('node:crypto');
+
+async function pbkdf2_hash(password, salt) {
+    return pbkdf2
+        .pbkdf2Sync(password, salt, 310000, 32, 'sha256')
+        .toString('hex');
+};
+```
+{% endtab %}
+
+{% tab title="Python" %}
+
+Use the [hashlib](https://docs.python.org/3/library/hashlib.html) package to implement `PBKDF2` password hashing.
+
+```python
+from hashlib import pbkdf2_hmac
+
+def pbkdf2_hash(password: str, salt: str) -> str:
+    dk = pbkdf2_hmac('sha256', password.encode('utf-8'), salt.encode('utf-8'), 310_000)
+    return dk.hex()
 ```
 {% endtab %}
 {% endtabs %}

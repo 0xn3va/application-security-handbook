@@ -50,4 +50,69 @@ func main() {
 }
 ```
 {% endtab %}
+
+{% tab title="Java" %}
+
+Use the [java.security.MessageDigest](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/security/MessageDigest.html) class for hashing implementation. **MessageDigest is not thread-safe**. Use a new instance for every thread.
+
+```java
+import java.security.MessageDigest;
+import java.nio.charset.StandardCharsets;
+import java.security.NoSuchAlgorithmException;
+
+public static String sha256Hash(String data) throws NoSuchAlgorithmException {
+    MessageDigest digest = MessageDigest.getInstance("SHA-256");
+    byte[] encodedHash = digest.digest(data.getBytes(StandardCharsets.UTF_8));
+    return toHex(encodedHash)
+}
+
+public static String sha3256Hash(String data) throws NoSuchAlgorithmException {
+    MessageDigest digest = MessageDigest.getInstance("SHA3-256");
+    byte[] encodedHash = digest.digest(data.getBytes(StandardCharsets.UTF_8));
+    return toHex(encodedHash)
+}
+
+private static String toHex(byte[] byteArray) {
+    String hex = "";
+    for (byte i : byteArray) {
+        hex += String.format("%02x", i);
+    }
+    return hex;
+}
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+
+Use the [crypto](https://nodejs.org/api/crypto.html) package for hashing implementation. The list of supported algorithms is dependent on the available algorithms supported by the version of OpenSSL on the platform. Use `openssl list -digest-algorithms` to display the available digest algorithms.
+
+```javascript
+const { createHash } = await import('node:crypto');
+
+async function sha256_digest(data) {
+    const hash = createHash('sha256');
+    hash.update(data);
+    return hash.digest('hex');
+}
+```
+{% endtab %}
+
+{% tab title="Python" %}
+
+Use the [hashlib](https://docs.python.org/3/library/hashlib.html) package for hashing implementation. You can find the list of available algorithms [here](https://docs.python.org/3/library/hashlib.html#constructors).
+
+```python
+import hashlib
+
+def sha256_digest(data: str) -> str:
+    encoded_data = data.encode('utf-8')
+    hash = hashlib.sha256(encoded_data)
+    return hash.hexdigest()
+
+def sha3_256_digest(data: str) -> str:
+    encoded_data = data.encode('utf-8')
+    hash = hashlib.sha3_256(encoded_data)
+    return hash.hexdigest()
+```
+{% endtab %}
 {% endtabs %}

@@ -299,6 +299,16 @@ func main() {
 }
 ```
 {% endtab %}
+
+{% tab title="Java" %}
+
+Use [Jakarta Bean Validation](https://beanvalidation.org/) to implement input validation.
+{% endtab %}
+
+{% tab title="Python" %}
+
+In Django, use [Validators](https://docs.djangoproject.com/en/4.2/ref/validators/) to implement input validation.
+{% endtab %}
 {% endtabs %}
 
 # Normalization implementation
@@ -347,16 +357,71 @@ func hasOnlyAllowedCharacters(s string) bool {
 func normalize(s string) (string, error) {
     // Verify the string s has valid UTF-8 encoding
     if !utf8.ValidString(s) {
-        return s, fmt.Errorf("Invalid UTF-8 characters found")
+        return nil, fmt.Errorf("Invalid UTF-8 characters found")
     }
     // Normalize string to NFKC form
     normS := norm.NFKC.String(s)
     // Verifies the string s has only allowed characters
     if !hasOnlyAllowedCharacters(normS) {
-        return s, fmt.Errorf("It contains characters from outside allowed categories list")
+        return nil, fmt.Errorf("It contains characters from outside allowed categories list")
     }
     return normS, nil
 }
+```
+{% endtab %}
+
+{% tab title="Java" %}
+
+You can use the [Normalizer](https://docs.oracle.com/javase/8/docs/api/java/text/Normalizer.html) class to implement normalization.
+
+```java
+import java.text.Normalizer;
+import java.text.Normalizer.Form;
+import java.io.UnsupportedEncodingException;
+
+public static String normalize(String str) {
+    if (!validUTF8(str)) {
+        throw new NormalizationException("Invalid UTF-8 characters found");
+    }
+    String normalizedStr = Normalizer.normalize(str, Normalizer.Form.NFKC);
+    if (!hasOnlyAllowedCharacters(normalizedStr)) {
+        throw new NormalizationException("It contains characters from outside allowed categories list");
+    }
+    return normalizedStr;
+}
+
+private static boolean validUTF8(String str) {
+    try {
+        str.getBytes("UTF-8");
+        return true;
+    } catch (UnsupportedEncodingException e) {
+        return false;
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Python" %}
+
+You can use the [unicodedata](https://docs.python.org/3/library/unicodedata.html) package to implement normalization.
+
+```python
+import unicodedata
+
+def normalize(s: str) -> str:
+    if not valid_utf8(s):
+        raise NormalizationError('Invalid UTF-8 characters found')
+    normalized_s: str = unicodedata.normalize('NFKC', s)
+    if not has_only_allowed_characters(normalized_s):
+        raise NormalizationError('It contains characters from outside allowed categories list')
+    return normalized_s
+
+def valid_utf8(s: str) -> bool:
+    try:
+        s.decode('utf-8')
+        return True
+    except UnicodeError:
+        return False
 ```
 {% endtab %}
 {% endtabs %}

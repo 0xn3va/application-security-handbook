@@ -31,4 +31,39 @@ func GenerateNewUUIDValue() string {
 }
 ```
 {% endtab %}
+
+{% tab title="Java" %}
+
+Use the [java.util.UUID](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html) class to generate UUID values.
+
+```java
+import java.util.UUID;
+
+public static String generateUUIDv4() {
+    return UUID.randomUUID().toString();
+}
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+
+Use the [uuid](https://www.npmjs.com/package/uuid) package to generate UUID values.
+
+```javascript
+import { v4 as uuidv4 } from 'uuid';
+uuidv4();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+
+Use the [uuid](https://docs.python.org/3/library/uuid.html) package to generate UUID values.
+
+```python
+import uuid
+
+def generate_uuid_v4() -> str:
+    return str(uuid.uuid4())
+```
+{% endtab %}
 {% endtabs %}
