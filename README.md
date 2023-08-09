@@ -1,6 +1,6 @@
 # Application Security Handbook
 
-A knowledge base of best practices for application security. You can find the Gitbook version [here]( ).
+A knowledge base of best practices for application security. You can find the Gitbook version [here](https://0xn3va.gitbook.io/application-security-handbook/).
 
 Feel free to point out mistakes and write your ideas [here](https://github.com/0xn3va/application-security-handbook/issues/new).
 
